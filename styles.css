@@ -1,0 +1,11 @@
+@import "tailwindcss";
+
+.active{
+    color: blue;
+    font-weight: 600;
+}
+
+.active-cat{
+    color: white;
+    background-color: blue;
+}
