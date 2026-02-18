@@ -1,11 +1,82 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="styles.css">
+    <title>SwiftCart E-commerce</title>
 </head>
-<body>
-    
+
+<body class="">
+    <nav class="shadow-sm bg-white">
+        <div class="navbar bg-base-100 max-w-7xl w-full mx-auto">
+            <div class="navbar-start">
+                <div class="dropdown">
+                    <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 6h16M4 12h8m-8 6h16" />
+                        </svg>
+                    </div>
+                    <ul tabindex="-1"
+                        class="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow text-lg">
+                        <li><a id="home-mobile" class="active" onclick="loadPage('displayHomePage')">Home</a></li>
+                        <li><a id="products-mobile" onclick="loadPage('displayProductsPage')">Products</a></li>
+                        <li><a>About</a></li>
+                        <li><a>Contact</a></li>
+                    </ul>
+                </div>
+                <a class="text-3xl font-bold text-blue-700">SwiftCart</a>
+            </div>
+            <div class="navbar-center hidden lg:flex">
+                <ul class="menu menu-horizontal px-1 text-lg">
+                    <li><a id="home" class="active" onclick="loadPage('displayHomePage')">Home</a></li>
+                    <li><a id="products" onclick="loadPage('displayProductsPage')">Products</a></li>
+                    <li><a>About</a></li>
+                    <li><a>Contact</a></li>
+                </ul>
+            </div>
+            <div class="navbar-end">
+                <button class="btn btn-ghost btn-circle">
+                    <div class="indicator">
+                        <i class="fa-solid fa-cart-shopping text-2xl"></i>
+                        <span id="cart-count" class="badge badge-sm badge-primary indicator-item">0</span>
+                    </div>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <section id="home-page" class="">
+        <section class="h-[32rem] w-full">
+            <div class="card bg-base-100 image-full h-full w-full rounded-none">
+                <figure class="h-full w-full">
+                    <img src="assets/banner-image.png" class="h-full w-full object-center object-cover" />
+                </figure>
+                <div class="card-body max-w-7xl w-full mx-auto px-1 flex justify-center">
+                    <div class="flex-col">
+                        <h2 class="text-2xl lg:text-5xl text-white font-bold">Best Collection For You</h2>
+                        <p class="lg:text-xl text-gray-300 font-semibold my-4 md:w-[50%]">Discover the latest trends in fashion,
+                            electronics, and more. Shop with
+                            confidence and style at SwiftCart.
+                        </p>
+                        <button class="btn btn-primary md:w-[10rem] md:py-6 text-lg text-white">Shop Now</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+
+    <script src="script.js"></script>
 </body>
+
 </html>
